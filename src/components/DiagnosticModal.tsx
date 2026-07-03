@@ -92,7 +92,7 @@ function PatternDiagram({ type }: { type: string }) {
         </div>
         <div className="text-sm text-neutral-600 font-mono">+</div>
         <div className="flex flex-col items-center">
-          <div className="text-[9px] text-emerald-400 font-mono mb-2">2. 强势反吞没</div>
+          <div className="text-[9px] text-emerald-400 font-mono mb-2">2. 反向吞没</div>
           <div className="flex flex-col items-center h-16 w-8 justify-center">
             <div className="w-0.5 h-1 bg-emerald-500" />
             <div className="w-5 h-12 bg-emerald-500 border border-emerald-400" />
@@ -116,7 +116,7 @@ function PatternDiagram({ type }: { type: string }) {
         </div>
         <div className="text-sm text-neutral-600 font-mono">+</div>
         <div className="flex flex-col items-center">
-          <div className="text-[9px] text-red-400 font-mono mb-2">2. 强势覆吞没</div>
+          <div className="text-[9px] text-red-400 font-mono mb-2">2. 反向吞没</div>
           <div className="flex flex-col items-center h-16 w-8 justify-center">
             <div className="w-0.5 h-1 bg-red-500" />
             <div className="w-5 h-12 bg-red-500 border border-red-400" />
@@ -132,7 +132,7 @@ function PatternDiagram({ type }: { type: string }) {
     return (
       <div className="flex items-center justify-center gap-4 py-5 bg-neutral-900/60 rounded-xl border border-neutral-800">
         <div className="flex flex-col items-center">
-          <div className="text-[8px] text-slate-500 font-mono mb-1">1. 单向趋势</div>
+          <div className="text-[8px] text-slate-500 font-mono mb-1">1. 前序趋势</div>
           <div className={`w-3.5 h-10 ${isBullish ? "bg-red-500" : "bg-emerald-500"}`} />
         </div>
         <div className="flex flex-col items-center">
@@ -140,7 +140,7 @@ function PatternDiagram({ type }: { type: string }) {
           <div className="w-2.5 h-2.5 bg-neutral-700 mt-4" />
         </div>
         <div className="flex flex-col items-center">
-          <div className="text-[8px] text-emerald-400 font-mono mb-1">3. 绝地反击</div>
+          <div className="text-[8px] text-emerald-400 font-mono mb-1">3. 趋势转向</div>
           <div className={`w-3.5 h-10 ${isBullish ? "bg-emerald-500" : "bg-red-500"}`} />
         </div>
       </div>
@@ -155,7 +155,7 @@ function PatternDiagram({ type }: { type: string }) {
         <div className="w-2 h-10 bg-emerald-500" />
         <div className="w-2 h-8 bg-neutral-800" />
       </div>
-      <div className="text-[8px] text-slate-500 font-mono mt-2">量化波段共振形态架构</div>
+      <div className="text-[8px] text-slate-500 font-mono mt-2">形态结构示意</div>
     </div>
   );
 }
@@ -184,7 +184,7 @@ export default function DiagnosticModal({ pattern, onClose }: DiagnosticModalPro
           <div className="flex items-center gap-2">
             <span className="flex h-2 w-2 rounded-full bg-indigo-500 animate-pulse" />
             <span className="text-[10px] text-slate-400 font-mono font-bold tracking-widest uppercase">
-              价格行为高级诊断报告
+              价格行为形态分析
             </span>
           </div>
           <button
@@ -217,7 +217,7 @@ export default function DiagnosticModal({ pattern, onClose }: DiagnosticModalPro
               </div>
             </div>
             <div>
-              <div className="text-[9px] text-slate-500 font-mono uppercase tracking-wider">关键临界价</div>
+              <div className="text-[9px] text-slate-500 font-mono uppercase tracking-wider">参考价</div>
               <div className="text-sm font-black text-white font-mono mt-0.5">
                 ${pattern.price}
               </div>
@@ -228,7 +228,7 @@ export default function DiagnosticModal({ pattern, onClose }: DiagnosticModalPro
           <div className="space-y-1.5">
             <div className="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-wider flex items-center gap-1">
               <Sparkles className="w-3.5 h-3.5 text-indigo-400" />
-              <span>标准形态图解</span>
+              <span>形态图解</span>
             </div>
             <PatternDiagram type={pattern.type} />
           </div>
@@ -237,7 +237,7 @@ export default function DiagnosticModal({ pattern, onClose }: DiagnosticModalPro
           <div className="space-y-1.5">
             <div className="text-[10px] text-slate-400 font-mono font-bold uppercase tracking-wider flex items-center gap-1">
               <TrendingUp className="w-3.5 h-3.5 text-indigo-400" />
-              <span>机构博弈与多空动能分析</span>
+              <span>多空博弈与动能分析</span>
             </div>
             <div className="bg-neutral-900/30 p-4 border border-neutral-900 rounded-xl leading-relaxed text-xs text-slate-300 font-sans whitespace-pre-wrap">
               {pattern.description}
@@ -252,7 +252,7 @@ export default function DiagnosticModal({ pattern, onClose }: DiagnosticModalPro
             onClick={onClose}
             className="w-full sm:w-auto px-5 py-2 bg-white text-black hover:bg-neutral-200 text-xs font-bold font-mono tracking-wider transition-colors cursor-pointer rounded-lg text-center"
           >
-            确认并返回
+            关闭
           </button>
         </div>
 

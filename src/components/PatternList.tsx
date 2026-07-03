@@ -227,7 +227,7 @@ export default function PatternList({
               >
                 <span className="flex items-center gap-1">
                   <Info className="w-3.5 h-3.5 text-indigo-400 animate-pulse" />
-                  点击载入多空博弈高级报告
+                  查看形态详情与多空分析
                 </span>
                 <ChevronRight className="w-3.5 h-3.5 text-slate-500" />
               </button>

@@ -569,7 +569,7 @@ export default function App() {
                             <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
                               <span className="flex items-center gap-1.5 text-xs font-mono font-bold text-slate-300">
                                 <span className="flex h-2 w-2 rounded-full bg-[#00c805] animate-pulse" />
-                                🔔 形态诊断: <span className="text-white font-black">{displayLabel}</span>
+                                形态识别: <span className="text-white font-black">{displayLabel}</span>
                               </span>
                               <span className="text-neutral-800 hidden sm:inline">|</span>
                               <span className="text-[10px] text-slate-400 font-mono">
@@ -577,11 +577,11 @@ export default function App() {
                               </span>
                               <span className="text-neutral-800 hidden sm:inline">|</span>
                               <span className="text-[10px] text-slate-400 font-mono">
-                                临界价: <span className="text-white font-bold">${activeFocus.price}</span>
+                                参考价: <span className="text-white font-bold">${activeFocus.price}</span>
                               </span>
                             </div>
                             <div className="flex items-center gap-1 text-[11px] text-indigo-400 group-hover:text-indigo-300 transition-colors font-mono font-bold">
-                              <span>点击加载机构博弈分析报告</span>
+                              <span>查看形态详解</span>
                               <ChevronRight className="w-3.5 h-3.5" />
                             </div>
                           </button>
